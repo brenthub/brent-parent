@@ -1,0 +1,49 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>release</id>
+	<includeBaseDirectory>true</includeBaseDirectory>
+	
+	<formats>
+		<format>tar.gz</format>
+		<format>dir</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<outputDirectory>/bin</outputDirectory>
+			<directory>${basedir}/src/main/resources</directory>
+			<includes>
+				<include>env.cfg</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<outputDirectory>/bin</outputDirectory>
+			<directory>${basedir}/profiles/${profile.id}/bin</directory>
+		</fileSet>
+		<fileSet>
+			<outputDirectory>bin</outputDirectory>
+			<directoryMode>0755</directoryMode>
+			<directory>${assembly.path}/shell</directory>
+		</fileSet>
+		<fileSet>
+			<outputDirectory>/conf</outputDirectory>
+			<directory>${basedir}/profiles/${profile.id}/conf</directory>
+		</fileSet>
+		<fileSet>
+			<outputDirectory>conf</outputDirectory>
+			<directory>${basedir}/src/main/resources</directory>
+			<excludes>
+				<exclude>env.cfg</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+	
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+		<dependencySet>
+			<scope>system</scope>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+</assembly>
