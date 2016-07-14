@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.brent</groupId>
 	<artifactId>brent-parent</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -117,7 +117,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/brenthub/brent-parent</connection>
 		<url>scm:git:https://github.com/brenthub/brent-parent/releases</url>
-		<tag>brent-parent-1.0.0</tag>
-	</scm>
+	  <tag>scm:git:https://github.com/brenthub/brent-parent/tags</tag>
+  </scm>
 
 </project>
