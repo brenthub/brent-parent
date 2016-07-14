@@ -13,7 +13,7 @@
 		<profile.id>dev</profile.id>
 		<war.WebRoot>${basedir}/src/main/webapp</war.WebRoot>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -36,7 +36,22 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	
+
+	<profiles>
+		<profile>
+			<id>produce</id>
+			<properties>
+				<profile.id>produce</profile.id>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<profile.id>test</profile.id>
+			</properties>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 
@@ -49,7 +64,7 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
