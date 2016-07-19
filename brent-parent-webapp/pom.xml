@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>cn.brent</groupId>
 		<artifactId>brent-parent</artifactId>
-		<version>1.0.2-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>brent-parent-webapp</artifactId>
 	<packaging>pom</packaging>
@@ -33,6 +33,18 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 	</dependencies>
 
