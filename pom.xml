@@ -104,12 +104,12 @@
 	<distributionManagement>
 		<repository>
 			<id>brent-releases</id>
-			<name>Dinpay Release Repository</name>
+			<name>Release Repository</name>
 			<url>file:D:/GitRep/brenthub/maven-repository/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>brent-snapshots</id>
-			<name>Dinpay Snapshot Repository</name>
+			<name>Snapshot Repository</name>
 			<url>file:D:/GitRep/brenthub/maven-repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
